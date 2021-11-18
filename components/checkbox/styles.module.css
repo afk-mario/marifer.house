@@ -1,0 +1,21 @@
+.checkbox label {
+  font-family: var(--font-mono);
+  padding: 0 var(--spacing-01);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: white;
+  position: relative;
+  transition: 0.2s ease all;
+  cursor: pointer;
+}
+
+.checkbox label:hover {
+  background-color: var(--color-blue-01);
+  cursor: pointer;
+}
+
+.checkbox.-checked label {
+  cursor: pointer;
+  background-color: var(--color-blue-03);
+  color: var(--color-bg);
+}

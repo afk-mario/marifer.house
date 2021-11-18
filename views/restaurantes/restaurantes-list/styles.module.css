@@ -1,0 +1,5 @@
+.restaurants-list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--spacing-02);
+}

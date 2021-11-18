@@ -1,0 +1,17 @@
+.restaurant-card-header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--spacing-01);
+}
+
+.restaurant-card-like {
+  font-size: var(--size-600);
+}
+
+.restaurant-card-tag-list {
+  display: flex;
+  flex-flow: row;
+  gap: var(--spacing-01);
+}

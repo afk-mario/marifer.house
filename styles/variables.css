@@ -1,0 +1,47 @@
+:root {
+  --font-mono: "Space Mono", monospace;
+
+  --color-yellow-01: hsla(50, 88%, 58%, 1);
+  --color-yellow-02: hsla(50, 73%, 53%, 1);
+  --color-yellow-03: hsl(50, 66%, 36%, 1);
+  --color-teal-01: hsla(147, 75%, 68%, 1);
+  --color-teal-02: hsla(147, 49%, 58%, 1);
+  --color-teal-03: hsl(146, 38%, 45%, 1);
+  --color-pink-01: hsla(340, 100%, 84%, 1);
+  --color-pink-02: hsla(340, 100%, 76%, 1);
+  --color-pink-03: hsla(340, 71%, 49%, 1);
+  --color-red-01: hsla(14, 88%, 62%, 1);
+  --color-red-02: hsla(14, 71%, 54%, 1);
+  --color-red-03: hsla(14, 83%, 43%, 1);
+  --color-blue-01: hsla(238, 98%, 78%, 1);
+  --color-blue-02: hsla(238, 79%, 70%, 1);
+  --color-blue-03: hsla(237, 63%, 60%, 1);
+
+  --color-fg: #000;
+  --color-bg: var(--color-pink-01);
+
+  --spacing-q: 2px;
+  --spacing-h: 4px;
+  --spacing-01: 8px;
+  --spacing-02: 16px;
+  --spacing-03: 24px;
+  --spacing-04: 32px;
+  --spacing-05: 40px;
+  --spacing-06: 48px;
+  --spacing-07: 56px;
+  --spacing-08: 64px;
+  --spacing-09: 72px;
+  --spacing-10: 80px;
+
+  --size-300: 0.75rem;
+  --size-400: 1rem;
+  --size-500: 1.33rem;
+  --size-600: 1.77rem;
+  --size-700: 2.36rem;
+  --size-800: 3.15rem;
+  --size-900: 4.2rem;
+
+  --border-width: 2px;
+  --border-radius: var(--spacing-01);
+  --border-color: var(--color-fg);
+}

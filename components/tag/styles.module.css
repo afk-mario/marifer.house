@@ -1,0 +1,7 @@
+.tag {
+  font-family: var(--font-mono);
+  padding: 0 var(--spacing-01);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: white;
+}

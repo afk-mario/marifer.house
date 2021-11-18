@@ -1,0 +1,5 @@
+.page-restaurantes {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+}
