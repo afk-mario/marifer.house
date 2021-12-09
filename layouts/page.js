@@ -6,7 +6,7 @@ import Header from "components/header";
 const classNamePrefix = "page";
 
 function Page({ className, title = "Marifer House", children }) {
-  const customClassName = classnames(classNamePrefix, className, {});
+  const customClassName = classnames(classNamePrefix, className, "wrapper", {});
   return (
     <>
       <Head>

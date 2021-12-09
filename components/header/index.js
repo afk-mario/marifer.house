@@ -14,12 +14,14 @@ function Header({ className, children }) {
   );
   return (
     <header className={customClassName} id="header">
-      <Link href="/">
-        <a>
-          <h1>Marifer House</h1>
-        </a>
-      </Link>
-      {children}
+      <div className="wrapper">
+        <Link href="/">
+          <a>
+            <h1>Marifer House</h1>
+          </a>
+        </Link>
+        {children}
+      </div>
     </header>
   );
 }

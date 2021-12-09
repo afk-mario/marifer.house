@@ -1,6 +1,5 @@
 .header {
   border-bottom: var(--border-width) solid var(--border-color);
-  padding: var(--spacing-02);
 }
 
 .header h1 {

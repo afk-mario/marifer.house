@@ -1,12 +1,16 @@
 .checkbox label {
   font-family: var(--font-mono);
-  padding: 0 var(--spacing-01);
+  padding: var(--spacing-q) var(--spacing-01);
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius);
   background: white;
   position: relative;
   transition: 0.2s ease all;
   cursor: pointer;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .checkbox label:hover {

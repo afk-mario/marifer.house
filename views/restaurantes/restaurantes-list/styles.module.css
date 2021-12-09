@@ -1,5 +1,13 @@
 .restaurants-list {
-  display: flex;
-  flex-flow: row wrap;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: var(--spacing-02);
+  overflow: hidden;
+}
+
+@media (max-width: 45em) {
+  .restaurants-list {
+    grid-template-columns: 1fr;
+  }
 }

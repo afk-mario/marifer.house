@@ -1,9 +1,23 @@
+.restaurant-card {
+  width: 100%;
+  background: white;
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+}
 .restaurant-card-header {
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: flex-start;
   gap: var(--spacing-01);
+  border-bottom: var(--border-width) solid var(--border-color);
+}
+
+.restaurant-card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .restaurant-card-like {
@@ -12,6 +26,28 @@
 
 .restaurant-card-tag-list {
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   gap: var(--spacing-01);
+}
+
+.restaurant-card-indicators {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--spacing-01);
+}
+
+.restaurant-card-header,
+.restaurant-card-footer,
+.restaurant-card-content {
+  padding: var(--spacing-02) var(--spacing-02);
+}
+
+.restaurant-card-footer {
+  border-top: var(--border-width) solid var(--border-color);
+}
+
+.restaurant-card-content {
+  flex: 1 1 auto;
 }

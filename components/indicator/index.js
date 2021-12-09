@@ -1,4 +1,3 @@
-import { CgCreditCard } from "react-icons/cg";
 import classnames from "classnames";
 
 import styles from "./styles.module.css";
