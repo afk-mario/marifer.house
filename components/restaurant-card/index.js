@@ -39,45 +39,49 @@ function RestaurantCard({
 
   return (
     <Card className={customClassName}>
+      <div className={styles[`${classNamePrefix}-indicators`]}>
+        <p>{price}</p>
+        {transfer ? (
+          <Indicator>
+            <RiBankLine />
+          </Indicator>
+        ) : null}
+        {card ? (
+          <Indicator>
+            <RiBankCard2Line />
+          </Indicator>
+        ) : null}
+        {veganOptions ? (
+          <Indicator>
+            <RiPlantLine />
+          </Indicator>
+        ) : null}
+        {instagram ? (
+          <a href={instagram} rel="noopener noreferrer" target="_blank">
+            <Indicator>
+              <CgInstagram />
+            </Indicator>
+          </a>
+        ) : null}
+        {map ? (
+          <a href={map} rel="noopener noreferrer" target="_blank">
+            <Indicator>
+              <RiMap2Line />
+            </Indicator>
+          </a>
+        ) : null}
+      </div>
+
       <header className={styles[`${classNamePrefix}-header`]}>
         <span className={styles[`${classNamePrefix}-like`]}>{like}</span>
         <h2 className={styles[`${classNamePrefix}-title`]}>{name}</h2>
       </header>
-      <div className={styles[`${classNamePrefix}-content`]}>
-        <div className={styles[`${classNamePrefix}-indicators`]}>
-          <p>{price}</p>
-          {transfer ? (
-            <Indicator>
-              <RiBankLine />
-            </Indicator>
-          ) : null}
-          {card ? (
-            <Indicator>
-              <RiBankCard2Line />
-            </Indicator>
-          ) : null}
-          {veganOptions ? (
-            <Indicator>
-              <RiPlantLine />
-            </Indicator>
-          ) : null}
-          {instagram ? (
-            <a href={instagram} rel="noopener noreferrer" target="_blank">
-              <Indicator>
-                <CgInstagram />
-              </Indicator>
-            </a>
-          ) : null}
-          {map ? (
-            <a href={map} rel="noopener noreferrer" target="_blank">
-              <Indicator>
-                <RiMap2Line />
-              </Indicator>
-            </a>
-          ) : null}
+
+      {description ? (
+        <div className={styles[`${classNamePrefix}-content`]}>
+          <Markdown>{description}</Markdown>
         </div>
-        <Markdown>{description}</Markdown>
-      </div>
+      ) : null}
       <footer className={styles[`${classNamePrefix}-footer`]}>
         <div className={styles[`${classNamePrefix}-tag-list`]}>
           {tags.split(",").map((tag) => {
