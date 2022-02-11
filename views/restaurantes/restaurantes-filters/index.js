@@ -1,7 +1,10 @@
 import Tag from "components/tag";
 import Checkbox from "components/checkbox";
 
-import { likeOptions, perksOptions, pricesOptions } from "./data";
+// import { likeOptions, perksOptions, pricesOptions } from "./data";
+const pricesOptions = [];
+const likeOptions = [];
+const perksOptions = [];
 
 import styles from "./styles.module.css";
 import { useRestaurantsDispatch, useRestaurants } from "../context";
