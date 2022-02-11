@@ -1,17 +1,10 @@
 import classnames from "classnames";
 
-import { CgInstagram } from "react-icons/cg";
-import {
-  RiBankCard2Line,
-  RiPlantLine,
-  RiBankLine,
-  RiMap2Line,
-} from "react-icons/ri";
-
 import Card from "components/card";
 import Tag from "components/tag";
-import Indicator from "components/indicator";
 import Markdown from "components/markdown";
+
+import Indicators from "./indicators";
 
 import styles from "./styles.module.css";
 
@@ -39,41 +32,21 @@ function RestaurantCard({
 
   return (
     <Card className={customClassName}>
-      <div className={styles[`${classNamePrefix}-indicators`]}>
-        <p>{price}</p>
-        {transfer ? (
-          <Indicator>
-            <RiBankLine />
-          </Indicator>
-        ) : null}
-        {card ? (
-          <Indicator>
-            <RiBankCard2Line />
-          </Indicator>
-        ) : null}
-        {veganOptions ? (
-          <Indicator>
-            <RiPlantLine />
-          </Indicator>
-        ) : null}
-        {instagram ? (
-          <a href={instagram} rel="noopener noreferrer" target="_blank">
-            <Indicator>
-              <CgInstagram />
-            </Indicator>
-          </a>
-        ) : null}
-        {map ? (
-          <a href={map} rel="noopener noreferrer" target="_blank">
-            <Indicator>
-              <RiMap2Line />
-            </Indicator>
-          </a>
-        ) : null}
+      <div className={styles[`${classNamePrefix}-title-bar`]}>
+        <div className={styles[`${classNamePrefix}-like-container`]}>
+          <span className={styles[`${classNamePrefix}-like`]}>{like}</span>
+        </div>
+        <Indicators
+          transfer={transfer}
+          card={card}
+          veganOptions={veganOptions}
+          instagram={instagram}
+          map={map}
+          price={price}
+        />
       </div>
 
       <header className={styles[`${classNamePrefix}-header`]}>
-        <span className={styles[`${classNamePrefix}-like`]}>{like}</span>
         <h2 className={styles[`${classNamePrefix}-title`]}>{name}</h2>
       </header>
 

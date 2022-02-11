@@ -8,6 +8,13 @@ export default function Restaurantes(props) {
   return <RestaurantesView {...props} />;
 }
 
+const likeMap = {
+  "❤️": 3,
+  "☺️": 2,
+  "😐": 1,
+  "😵‍💫": 0,
+};
+
 const notion = new Client({
   auth: process.env.NOTION_SECRET,
 });
@@ -18,7 +25,12 @@ export async function getServerSideProps() {
   });
 
   const { results } = data;
-  const items = parseTableItems(results);
+  const items = parseTableItems(results).sort((a, b) => {
+    const aValue = likeMap[a.like];
+    const bValue = likeMap[b.like];
+    return bValue - aValue;
+  });
+
   const tags = [
     ...new Set(
       items
